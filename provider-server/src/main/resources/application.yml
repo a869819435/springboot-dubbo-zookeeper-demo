@@ -1,0 +1,17 @@
+# 应用名称
+spring:
+  application:
+    name: provider-server
+# 应用服务 WEB 访问端口
+server:
+  port:
+    8081
+# 配置Dubbo
+dubbo:
+  application:
+    name: provider-server # 配置服务名称
+  registry:
+    address: zookeeper://127.0.0.1:2181 # 注册中心IP
+  scan:
+    base-packages: com.yang.providerserver.service #需要注册的服务包路径[扫描含有@DubboService的服务]
+
